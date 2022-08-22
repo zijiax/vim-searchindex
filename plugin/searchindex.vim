@@ -53,13 +53,13 @@ noremap! <Plug>SearchIndex <Nop>
 nnoremap <silent> <Plug>SearchIndex :call <SID>PrintMatches()<CR>
 
 " Remap search commands (only if they're not mapped by the user).
-silent! nmap <silent><unique> n n<Plug>SearchIndex
-silent! nmap <silent><unique> N N<Plug>SearchIndex
+silent! nmap <silent><unique> n nzz<Plug>SearchIndex
+silent! nmap <silent><unique> N Nzz<Plug>SearchIndex
 
-silent! map <unique> *  <Plug>ImprovedStar_*<Plug>SearchIndex
-silent! map <unique> #  <Plug>ImprovedStar_#<Plug>SearchIndex
-silent! map <unique> g* <Plug>ImprovedStar_g*<Plug>SearchIndex
-silent! map <unique> g# <Plug>ImprovedStar_g#<Plug>SearchIndex
+silent! map <unique> *  <Plug>ImprovedStar_*zz<Plug>SearchIndex
+silent! map <unique> #  <Plug>ImprovedStar_#zz<Plug>SearchIndex
+silent! map <unique> g* <Plug>ImprovedStar_g*zz<Plug>SearchIndex
+silent! map <unique> g# <Plug>ImprovedStar_g#zz<Plug>SearchIndex
 
 noremap <silent><expr> <Plug>ImprovedStar_*  <SID>StarSearch('*')
 noremap <silent><expr> <Plug>ImprovedStar_#  <SID>StarSearch('#')
